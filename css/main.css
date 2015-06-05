@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     background-attachment: fixed;   /*背景图不随页面的滚动而滚动*/
     background-size: cover;         /*背景图始终填满整个屏幕*/
@@ -17,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     width: 960px;
     margin: 0 auto;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 .main-header{
@@ -40,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 .main-header h1 {
     margin: 0 auto;
     margin-bottom: 20px;
+    text-align: center;
 
     font-weight: 300;
     font-size: 50px;
@@ -52,6 +61,7 @@ ul.no_style {
     list-style: none;   /*去掉列表装饰*/
     padding: 0;         /*清除浏览器默认的间隔*/
     margin: 0;
+    text-align: center;
 }
 
 ul.inline-items li {
@@ -84,10 +94,15 @@ ul.inline-items li {
     background-color: #fff;
 }
 
-.info-section header h2 {
+.info-section header h2{
     font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-align: center;
+}
+
+.info-section header p{
+    text-align: center;
 }
 
 .info-section header h2:after{
@@ -138,5 +153,157 @@ ul.inline-items li {
     background-repeat: no-repeat;
     background-position: center top;
     /*overflow: hidden;*/
+}
+
+.education-experience__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education-experience__list li{
+    margin: 40px auto;
+}
+
+.education-experience__list img{
+    float: left;
+    width: 160px;
+}
+.education-experience__list__description{
+    padding-left: 40px;
+    overflow: hidden;
+}
+
+.photos__list{
+    list-style: none;
+    /*text-align: center;*/
+    display: block;
+    overflow: hidden;
+}
+
+.photos__list img{
+    width: 25%;
+    padding: 10px;
+    float: left;
+}
+
+.get-in-touch__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.get-in-touch__list li{
+    text-align: center;
+    width: 25%;
+    padding: 10px;
+    float: left;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 8px;
+}
+
+.contact button {
+    width: 100%;
+    border: none;
+    border-radius: 9999px;
+
+    background: #ffd524;
+
+    cursor: pointer;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    color: #fff;
+    box-shadow: 0 3px 0 #daae1d;
+    padding: 8px;
+    margin-top: 10px;
+}
+
+.contact form{
+    margin: 0 auto;
+    width: 40%;
+}
+.contact__list{
+    position: relative;
+    margin: 8px auto;
+}
+.contact__list label{
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    text-align: right;
+}
+
+@media only screen and (max-width : 480px) {
+    .container{
+        width: 100%;
+    }
+    .main-nav{
+        padding: 1px;
+    }
+    .main-header h1{
+        font-size: 32px;
+    }
+    ul.inline-items li{
+        display: block;
+    }
+
+    .info-section{
+        padding: 10px;
+    }
+
+    li.whatido__skill{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .education-experience__list img{
+        float: none;
+        display: block;
+        margin: 0 auto;
+        /*text-align: center;*/
+    }
+
+    .education-experience__list__description{
+        padding-left: 10px;
+    }
+
+    .education-experience span{
+        display: block;
+    }
+
+    .photos__list{
+        margin: 0 auto;
+        padding: inherit;
+    }
+
+    .photos__list img{
+        /*box-sizing: content-box;*/
+        width: 100%;
+    }
+
+    .get-in-touch__list li{
+        width: 50%;
+        padding: inherit;
+    }
+
+    .get-in-touch__list img{
+        width: 80%;
+    }
+
+    .contact form{
+        width: 100%;
+    }
+    .contact__list label{
+        position: static;
+    }
 }
 
